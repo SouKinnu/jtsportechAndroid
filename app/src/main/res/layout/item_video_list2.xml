@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/LinearLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/dp_15"
+    android:background="#00000000">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:background="#00000000" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="160dp"
+        android:layout_height="18dp"
+        android:layout_above="@id/name"
+        android:layout_centerVertical="true"
+        android:background="@drawable/shape_bottom_radius_bg"
+        android:foregroundGravity="center_vertical"
+        android:gravity="end"
+        android:paddingEnd="@dimen/dp_6"
+        android:textColor="@color/white"
+        android:textSize="11sp" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp" />
+
+    <ImageView
+        android:id="@+id/image1"
+        android:layout_width="160dp"
+        android:layout_height="90dp"
+        android:background="#00000000" />
+</RelativeLayout>

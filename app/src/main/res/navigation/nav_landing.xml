@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_landing"
+    app:startDestination="@id/oneClickLoginFragment">
+
+    <action
+        android:id="@+id/action_global_oneClickLoginFragment"
+        app:destination="@id/oneClickLoginFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right" />
+    <action
+        android:id="@+id/action_global_accountLoginFragment"
+        app:destination="@id/accountLoginFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/oneClickLoginFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_phoneLoginFragment"
+        app:destination="@id/phoneLoginFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/oneClickLoginFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/oneClickLoginFragment"
+        android:name="com.jtsportech.visport.android.landing.login.oneclick.OneClickLoginFragment"
+        android:label="fragment_one_click_login"
+        tools:layout="@layout/fragment_one_click_login"></fragment>
+    <fragment
+        android:id="@+id/accountLoginFragment"
+        android:name="com.jtsportech.visport.android.landing.login.account.AccountLoginFragment"
+        android:label="fragment_account_login"
+        tools:layout="@layout/fragment_account_login">
+        <action
+            android:id="@+id/action_accountLoginFragment_to_webActivity"
+            app:destination="@id/webActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/phoneLoginFragment"
+        android:name="com.jtsportech.visport.android.landing.login.phone.PhoneLoginFragment"
+        android:label="fragment_phone_login"
+        tools:layout="@layout/fragment_phone_login">
+        <action
+            android:id="@+id/action_phoneLoginFragment_to_webActivity"
+            app:destination="@id/webActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <activity
+        android:id="@+id/webActivity"
+        android:name="com.jtsportech.visport.android.webview.WebActivity"
+        android:label="activity_web"
+        tools:layout="@layout/activity_web">
+
+        <argument
+            android:name="type"
+            app:argType="com.jtsportech.visport.android.dataSource.webview.WebViewType" />
+
+    </activity>
+</navigation>

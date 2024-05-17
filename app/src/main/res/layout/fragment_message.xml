@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".dashboard.message.MessageFragment">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_message_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_message_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/message_message"
+        android:textColor="@color/mine_shaft"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/guide_message_start"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:textColor="@color/dove_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+        app:layout_constraintStart_toEndOf="@+id/tv_message"
+        app:layout_constraintTop_toTopOf="@+id/tv_message"
+        tools:text="@string/message_message_quantity" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_clear_unread"
+        android:layout_marginStart="12dp"
+        android:drawableStart="@drawable/icon_clear"
+        android:drawablePadding="6dp"
+        android:text="@string/message_clear_unread"
+        android:textColor="@color/dusty_gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+        app:layout_constraintStart_toEndOf="@+id/tv_quantity"
+        app:layout_constraintTop_toTopOf="@+id/tv_message" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/shape_message_search_bg"
+        android:drawableStart="@drawable/icon_search_message"
+        android:drawablePadding="6dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:text="@string/message_search"
+        android:textColor="@color/dusty_gray"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_message"
+        app:layout_constraintEnd_toEndOf="@+id/guide_message_end"
+        app:layout_constraintTop_toTopOf="@+id/tv_message" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_message"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="22dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guide_message_end"
+        app:layout_constraintStart_toEndOf="@+id/guide_message_start"
+        app:layout_constraintTop_toBottomOf="@+id/tv_message"
+        tools:listitem="@layout/item_message_type" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

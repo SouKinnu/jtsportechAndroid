@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".landing.login.account.AccountLoginFragment">
+
+    <include layout="@layout/include_login" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_marginTop="280dp"
+        android:id="@+id/cl_user"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_height="33dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/iv_user"
+            android:src="@drawable/icon_user"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            style="@style/LoginEditText"
+            android:id="@+id/et_account"
+            android:hint="@string/account_account_enter_hint"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_user"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/alto_2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_marginTop="22dp"
+        android:id="@+id/cl_pw"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_user"
+        android:layout_height="33dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:adjustViewBounds="true"
+            android:id="@+id/iv_pw"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:src="@drawable/icon_password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            style="@style/LoginEditText"
+            android:id="@+id/et_password"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:hint="@string/account_password_enter_hint"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/iv_pw"
+            />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:background="@color/alto_2"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/et_invitation_code"
+        style="@style/InvitationCodeEditText"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/oneclick_invitation_code_hint"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cl_pw" />
+
+    <com.jtsportech.visport.android.components.CtaButton
+        android:id="@+id/bt_login"
+        style="@style/ButtonDisabled"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/account_login"
+        app:actvieState="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_invitation_code" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_phone_login"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/oneclick_log_in_with_a_different_phone_number"
+        android:lines="2"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_login" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_width="1dp"
+        android:layout_height="12dp"
+        android:background="@color/dusty_gray_2"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_phone_login"
+        app:layout_constraintEnd_toStartOf="@+id/tv_one_click_login"
+        app:layout_constraintStart_toEndOf="@+id/tv_phone_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_phone_login" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_one_click_login"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:text="@string/phone_one_click_login"
+        android:lines="2"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@+id/et_invitation_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_phone_login" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

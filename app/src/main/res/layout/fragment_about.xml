@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".mine.about.AboutFragment">
+
+    <com.jtsportech.visport.android.components.AppBarView
+        android:id="@+id/ap_about"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:bar_left_icon="@drawable/icon_backarrow_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/mine_about_us" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_app_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_about" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="@string/home_jt"
+        android:textColor="@color/mine_shaft"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_app_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_company"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/about_company"
+        android:textColor="@color/mine_shaft"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_app_name" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_company_introduce"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:text="@string/about_company_introduce"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_company" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_qr_bg"
+        android:layout_width="106dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="24dp"
+        android:background="@color/porcelain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_company_introduce" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_qr"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/tv_qr_tips"
+        app:layout_constraintEnd_toEndOf="@+id/iv_qr_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_qr_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_qr_bg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_qr_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="@string/about_scan_to_see_more"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_qr_bg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_qr_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_qr_bg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

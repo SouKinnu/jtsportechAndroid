@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="@layout/fragment_one_click_login"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_startup_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_logo80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="52dp"
+        android:background="@color/porcelain"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/tv_other_login"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_other_login"
+        android:layout_height="1dp"/>
+
+    <View
+        android:layout_width="52dp"
+        android:background="@color/porcelain"
+        android:layout_marginStart="16dp"
+        app:layout_constraintStart_toEndOf="@+id/tv_other_login"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_other_login"
+        android:layout_height="1dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:textColor="@color/gray"
+        android:id="@+id/tv_other_login"
+        android:textSize="14sp"
+        android:layout_marginBottom="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/iv_wechat"
+        android:text="@string/oneclick_other_ways_to_log_in"
+        android:layout_height="wrap_content"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:adjustViewBounds="true"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        android:src="@drawable/icom_wechat"
+        app:layout_constraintBottom_toTopOf="@+id/bt_radio"
+        app:layout_constraintEnd_toStartOf="@+id/iv_qq"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_qq"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_qq"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_wechat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_wechat" />
+
+    <com.jtsportech.visport.android.components.CtaImageButton
+        android:id="@+id/bt_radio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="2dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_agreement"
+        app:layout_constraintEnd_toStartOf="@+id/tv_agreement"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_agreement" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_agreement"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="17dp"
+        android:layout_marginBottom="55dp"
+        android:text="@string/oneclick_privacy_agreement"
+        android:textColor="@color/gray"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/bt_radio" />
+
+</merge>

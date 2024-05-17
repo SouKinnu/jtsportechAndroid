@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@android:color/transparent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_sun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_mon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_sun"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_sun1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_sun"
+            android:layout_alignEnd="@+id/iv_date_sun"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="日" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_sun2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_sun1"
+            android:layout_alignStart="@+id/iv_date_sun"
+            android:layout_alignEnd="@+id/iv_date_sun"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="27" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_mon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_tue"
+        app:layout_constraintStart_toEndOf="@+id/rl_sun"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_mon"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_mon1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_mon"
+            android:layout_alignEnd="@+id/iv_date_mon"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="一" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_mon2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_mon1"
+            android:layout_alignStart="@+id/iv_date_mon"
+            android:layout_alignEnd="@+id/iv_date_mon"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="28" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_tue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_wed"
+        app:layout_constraintStart_toEndOf="@+id/rl_mon"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_tue"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_tue1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_tue"
+            android:layout_alignEnd="@+id/iv_date_tue"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="二" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_tue2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_tue1"
+            android:layout_alignStart="@+id/iv_date_tue"
+            android:layout_alignEnd="@+id/iv_date_tue"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="29" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_wed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_thu"
+        app:layout_constraintStart_toEndOf="@+id/rl_tue"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_wed"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_wed1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_wed"
+            android:layout_alignEnd="@+id/iv_date_wed"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="三" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_wed2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_wed1"
+            android:layout_alignStart="@+id/iv_date_wed"
+            android:layout_alignEnd="@+id/iv_date_wed"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="30" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_thu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_fri"
+        app:layout_constraintStart_toEndOf="@+id/rl_wed"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_thu"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_thu1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_thu"
+            android:layout_alignEnd="@+id/iv_date_thu"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="四" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_thu2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_thu1"
+            android:layout_alignStart="@+id/iv_date_thu"
+            android:layout_alignEnd="@+id/iv_date_thu"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="31" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_fri"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@+id/rl_sat"
+        app:layout_constraintStart_toEndOf="@+id/rl_thu"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_fri"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_fri1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_fri"
+            android:layout_alignEnd="@+id/iv_date_fri"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="五" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_fri2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_fri1"
+            android:layout_alignStart="@+id/iv_date_fri"
+            android:layout_alignEnd="@+id/iv_date_fri"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="01" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_sat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/rl_fri"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_date_sat"
+            android:layout_width="@dimen/dp_39"
+            android:layout_height="@dimen/dp_54"
+            android:adjustViewBounds="true"
+            tools:src="@drawable/bg_date_blue" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_sat1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/iv_date_sat"
+            android:layout_alignEnd="@+id/iv_date_sat"
+            android:layout_marginTop="@dimen/dp_5"
+            android:gravity="center"
+            android:textColor="@color/mine_shaft"
+            android:textSize="@dimen/sp_14"
+            tools:text="六" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_date_sat2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_date_sat1"
+            android:layout_alignStart="@+id/iv_date_sat"
+            android:layout_alignEnd="@+id/iv_date_sat"
+            android:gravity="center"
+            android:textColor="@color/east_bay"
+            android:textSize="@dimen/sp_14"
+            tools:text="02" />
+    </RelativeLayout>
+
+    <!--    <RelativeLayout-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <androidx.appcompat.widget.AppCompatImageView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:adjustViewBounds="true"-->
+    <!--            tools:src="@drawable/bg_date_blue" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/mine_shaft"-->
+    <!--            android:textSize="@dimen/sp_14"-->
+    <!--            tools:text="日" />-->
+
+    <!--        <androidx.appcompat.widget.AppCompatTextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textColor="@color/east_bay"-->
+    <!--            android:textSize="@dimen/sp_14"-->
+    <!--            tools:text="27" />-->
+    <!--    </RelativeLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

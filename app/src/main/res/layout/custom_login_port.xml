@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_startup_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_log"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="165dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/img_logo80"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 必须用不带 AppCompat 的 EditText,否则输入框无法正常使用  -->
+    <EditText
+        android:id="@+id/et_invitation_code"
+        style="@style/InvitationCodeEditText"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="40dp"
+        android:hint="@string/oneclick_invitation_code_hint"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_log" />
+
+    <!--    <View-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="1dp"-->
+    <!--        android:background="@color/black_a60"-->
+    <!--        app:layout_constraintEnd_toEndOf="@+id/et_invitation_code"-->
+    <!--        app:layout_constraintStart_toStartOf="@+id/et_invitation_code"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/et_invitation_code" />-->
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_account_login"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/oneclick_log_in_with_your_account_and_password"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toStartOf="@+id/v1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_invitation_code" />
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="1dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/dusty_gray_2"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_account_login"
+        app:layout_constraintEnd_toStartOf="@+id/tv_phone_login"
+        app:layout_constraintStart_toEndOf="@+id/tv_account_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_account_login" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_phone_login"
+        android:layout_width="180dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:lines="2"
+        android:text="@string/oneclick_log_in_with_a_different_phone_number"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@+id/et_invitation_code"
+        app:layout_constraintTop_toTopOf="@+id/tv_account_login" />
+
+    <View
+        android:layout_width="52dp"
+        android:layout_height="1dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/porcelain"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_login"
+        app:layout_constraintEnd_toStartOf="@+id/tv_other_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_other_login" />
+
+    <View
+        android:layout_width="52dp"
+        android:layout_height="1dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/porcelain"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_other_login"
+        app:layout_constraintStart_toEndOf="@+id/tv_other_login"
+        app:layout_constraintTop_toTopOf="@+id/tv_other_login" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_other_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:text="@string/oneclick_other_ways_to_log_in"
+        android:textColor="@color/gray"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/iv_wechat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_wechat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="102dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icom_wechat"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/iv_qq"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_qq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_qq"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_wechat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/iv_wechat" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

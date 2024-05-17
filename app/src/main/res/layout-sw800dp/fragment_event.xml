@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dashboard.home.event.EventFragment">
+
+    <include layout="@layout/include_banner" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_date_bg"
+        android:layout_width="@dimen/dp_345"
+        android:layout_height="@dimen/dp_110"
+        android:layout_marginTop="@dimen/dp_15"
+        android:src="@drawable/img_date_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_14"
+        android:layout_marginTop="@dimen/dp_12"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintStart_toStartOf="@+id/iv_date_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_date_bg"
+        tools:text="2023·八月" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_11"
+        android:layout_marginEnd="@dimen/dp_13"
+        android:background="@drawable/shape_date_today"
+        android:paddingStart="@dimen/dp_10"
+        android:paddingTop="@dimen/dp_1"
+        android:paddingEnd="@dimen/dp_10"
+        android:paddingBottom="@dimen/dp_1"
+        android:text="@string/event_today"
+        android:textColor="@color/ecstasy"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="@+id/iv_date_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_date_bg" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_last_week"
+        android:layout_width="@dimen/dp_19"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_29"
+        android:adjustViewBounds="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/dp_5"
+        android:src="@drawable/icon_left_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_date_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_date_bg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_calendar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_10"
+        android:layout_marginBottom="@dimen/dp_12"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_date_bg"
+        app:layout_constraintEnd_toStartOf="@+id/ib_next_week"
+        app:layout_constraintStart_toEndOf="@+id/ib_last_week"
+        app:layout_constraintTop_toBottomOf="@+id/tv_date"
+        tools:listitem="@layout/item_calendar" />
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/ib_next_week"
+        android:layout_width="@dimen/dp_19"
+        android:layout_height="@dimen/dp_32"
+        android:layout_marginBottom="@dimen/dp_29"
+        android:adjustViewBounds="true"
+        android:background="?android:attr/selectableItemBackground"
+        android:padding="@dimen/dp_5"
+        android:src="@drawable/icon_right_arrow"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_date_bg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_date_bg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_event_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_16"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/iv_date_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_date_bg"
+        tools:text="英格兰足球超级联赛" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_all_event"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:drawableEnd="@drawable/icon_arrow_grey"
+        android:drawablePadding="@dimen/dp_6"
+        android:text="@string/event_all_event"
+        android:textColor="@color/dusty_gray"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="@+id/iv_date_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_date_bg" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_event"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_marginBottom="@dimen/dp_10"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_event_type"
+        tools:listitem="@layout/item_event" />
+
+
+    <include
+        layout="@layout/include_empty_events"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rv_event" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

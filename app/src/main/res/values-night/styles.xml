@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+
+    </style>
+
+<!--    <style name="SplashTheme" parent="AppTheme">-->
+<!--        <item name="android:windowNoTitle">true</item>-->
+<!--        <item name="android:windowFullscreen">true</item>-->
+<!--        <item name="android:windowAnimationStyle">@null</item>-->
+<!--        // 解决部分机型,会闪烁问题-->
+<!--        <item name="android:windowBackground">@drawable/ic_splash</item>-->
+<!--    </style>-->
+</resources>

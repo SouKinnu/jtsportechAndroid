@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_percent_33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_percent_66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_event_bg"
+        android:layout_width="@dimen/dp_349"
+        android:layout_height="@dimen/dp_87"
+        android:src="@drawable/img_competition_f_blue"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_18"
+        android:layout_marginTop="@dimen/dp_10"
+        android:adjustViewBounds="true"
+        android:src="@drawable/selector_favorites_edit"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@+id/iv_event_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_event_bg"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_compilation"
+        android:layout_width="@dimen/dp_29"
+        android:layout_height="@dimen/dp_29"
+        android:layout_marginTop="@dimen/dp_10"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tag_collect_album"
+        app:layout_constraintEnd_toEndOf="@+id/iv_event_bg"
+        app:layout_constraintTop_toTopOf="@+id/iv_event_bg" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_compilation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_2"
+        android:layout_marginEnd="@dimen/dp_2"
+        android:rotation="45"
+        android:text="@string/my_favorites_compilation"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_8"
+        app:layout_constraintEnd_toEndOf="@+id/iv_compilation"
+        app:layout_constraintTop_toTopOf="@+id/iv_compilation" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_compilation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="iv_compilation,tv_compilation"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_event_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="@+id/iv_event_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_event_bg"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="8月30日 18:00" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_event_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_event_bg"
+        app:layout_constraintEnd_toEndOf="@+id/iv_event_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_event_bg"
+        tools:text="@string/event_notify_me_of_the_start"
+        tools:textColor="@color/cerulean" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="@dimen/dp_27"
+        android:layout_height="@dimen/dp_47"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_vs"
+        app:layout_constraintEnd_toEndOf="@+id/iv_event_bg"
+        app:layout_constraintStart_toStartOf="@+id/iv_event_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_event_time" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_team_logo1"
+        android:layout_width="@dimen/dp_43"
+        android:layout_height="@dimen/dp_43"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/guide_percent_33"
+        app:layout_constraintStart_toStartOf="@+id/iv_event_bg"
+        app:layout_constraintTop_toBottomOf="@+id/tv_event_time"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="@+id/guide_percent_33"
+        app:layout_constraintStart_toStartOf="@+id/iv_event_bg"
+        app:layout_constraintTop_toBottomOf="@+id/iv_team_logo1"
+        tools:text="皇家马德里" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_team_logo2"
+        android:layout_width="@dimen/dp_43"
+        android:layout_height="@dimen/dp_43"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="@+id/iv_event_bg"
+        app:layout_constraintStart_toStartOf="@+id/guide_percent_66"
+        app:layout_constraintTop_toBottomOf="@+id/tv_event_time"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="@+id/iv_event_bg"
+        app:layout_constraintStart_toStartOf="@+id/guide_percent_66"
+        app:layout_constraintTop_toBottomOf="@+id/iv_team_logo2"
+        tools:text="皇家马德里" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

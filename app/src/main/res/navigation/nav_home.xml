@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_home"
+    app:startDestination="@id/searchMatcheFragment">
+
+    <action
+        android:id="@+id/action_global_allCompetitionsFragment"
+        app:destination="@id/allCompetitionsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/searchMatcheFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/searchMatcheFragment"
+        android:name="com.jtsportech.visport.android.home.search.SearchMatcheFragment"
+        android:label="fragment_search_matche"
+        tools:layout="@layout/fragment_search_matche" />
+    <fragment
+        android:id="@+id/allCompetitionsFragment"
+        android:name="com.jtsportech.visport.android.home.allCompetitions.AllCompetitionsFragment"
+        android:label="fragment_all_competitions"
+        tools:layout="@layout/fragment_all_competitions">
+
+        <argument
+            android:name="eventName"
+            app:argType="string" />
+
+        <argument
+            android:name="leagueId"
+            app:argType="string" />
+    </fragment>
+</navigation>

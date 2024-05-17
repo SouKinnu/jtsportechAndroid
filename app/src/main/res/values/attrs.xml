@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="numOfIndicators" format="integer" />
+    <attr name="title" format="string" />
+    <attr name="titleColor" format="color" />
+    <attr name="titleSize" format="dimension" />
+    <attr name="bar_left_icon" format="reference" />
+    <attr name="bar_right_icon" format="reference" />
+    <attr name="bar_underscore_color" format="color" />
+    <attr name="isShowBarUnderscoreColor" format="boolean" />
+    <attr name="isClickableAndFocusable" format="boolean" />
+    <attr name="foregroundColor" format="color" />
+    <attr name="backgroundColor" format="color" />
+    <attr name="progress" format="float" />
+    <attr name="stateInfo" format="string" />
+    <attr name="stateInfoColor" format="reference|color" />
+    <attr name="stateInfoSize" format="dimension" />
+    <attr name="isShowMore" format="boolean" />
+    <attr name="isShowTitleSideView" format="boolean" />
+    <attr name="subTitle" format="string" />
+    <attr name="subTitleColor" format="color" />
+    <attr name="subTitleSize" format="dimension" />
+    <attr name="bar_right_text" format="string" />
+    <attr name="bar_right_textSize" format="dimension" />
+    <attr name="bar_right_textColor" format="color" />
+    <attr name="titleIcon" format="reference" />
+    <attr name="moreIcon" format="reference" />
+    <attr name="isShowUnderscore" format="boolean" />
+    <attr name="sweepAngle" format="integer" />
+    <attr name="bgColor" format="color" />
+
+    <declare-styleable name="CtaImageButton">
+        <attr name="enableIcon" format="reference" />
+        <attr name="disableIcon" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CtaButton">
+        <attr name="actvieState" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="AppBarView">
+        <attr name="title" />
+        <attr name="titleColor" />
+        <attr name="titleSize" />
+        <attr name="bar_left_icon" />
+        <attr name="bar_right_icon" />
+        <attr name="bar_underscore_color" />
+        <attr name="bar_right_text" />
+        <attr name="bar_right_textSize" />
+        <attr name="bar_right_textColor" />
+    </declare-styleable>
+
+    <declare-styleable name="SubmenuButton">
+        <attr name="title" />
+        <attr name="titleColor" />
+        <attr name="titleSize" />
+        <attr name="isClickableAndFocusable" />
+        <attr name="subTitle" />
+        <attr name="subTitleColor" />
+        <attr name="subTitleSize" />
+        <attr name="stateInfo" />
+        <attr name="stateInfoColor" />
+        <attr name="stateInfoSize" />
+        <attr name="isShowMore" />
+        <attr name="moreIcon" />
+        <attr name="isShowUnderscore" />
+        <attr name="bar_underscore_color" />
+        <attr name="isShowTitleSideView" />
+        <attr name="titleIcon" />
+        <attr name="bgColor" />
+    </declare-styleable>
+
+    <declare-styleable name="NavigationBarView">
+        <attr name="unSelectedTextColor" format="color"/>
+        <attr name="selectedTextColor" format="color"/>
+        <attr name="fontSize" format="float"/>
+    </declare-styleable>
+</resources>

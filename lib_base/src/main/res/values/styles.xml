@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="LoadingOverlay">
+        <item name="android:elevation">80dp</item>
+        <item name="android:outlineProvider">none</item>
+    </style>
+
+    <style name="LoadingOverlay.Text" parent="TextAppearance.MaterialComponents.Body1">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="BaseDialog" >
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否去除边框-->
+        <item name="android:windowFrame">@null</item>
+        <!--是否浮现在activity之上-->
+        <item name="android:windowIsFloating">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="BaseDialog.keyboard" parent="BaseDialog">
+        <item name="android:windowSoftInputMode">stateAlwaysVisible</item><!--显示软件盘-->
+    </style>
+
+
+    <style name="BottomSheetDialogCircle" parent="Theme.Design.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/bottomSheetStyleWrapper</item>
+    </style>
+
+    <style name="bottomSheetStyleWrapper" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:topLeftRadius">16dp</item>
+        <item name="android:topRightRadius">16dp</item>
+    </style>
+
+    <style name="popwin_scale_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_right_top_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/scale_right_top_exit_anim</item>
+    </style>
+
+    <style name="popwin_translate_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/translate_top_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/translate_top_exit_anim</item>
+    </style>
+
+    <style name="popwin_scale_top_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/scale_top_enter_anim</item>
+        <item name="android:windowExitAnimation">@anim/scale_top_exit_anim</item>
+    </style>
+</resources>

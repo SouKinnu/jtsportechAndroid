@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".mine.memberDetail.MemberDetailFragment">
+
+    <com.jtsportech.visport.android.components.AppBarView
+        android:id="@+id/ap_member_detail"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:bar_left_icon="@drawable/icon_backarrow_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/member_detail_player_details" />
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card_member"
+        android:layout_width="0dp"
+        android:layout_height="181dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/white"
+        app:cardCornerRadius="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_member_detail">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_member_detail"
+                android:layout_width="match_parent"
+                android:layout_height="115dp"
+                android:background="@drawable/shape_member_detail_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_logo"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="14dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/mine_shaft"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@+id/iv_logo"
+                app:layout_constraintTop_toTopOf="@+id/iv_logo"
+                tools:text="克里斯蒂亚诺·罗纳尔多" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_team_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/east_bay"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_name"
+                app:layout_constraintTop_toBottomOf="@+id/tv_name"
+                tools:text="利雅得胜利俱乐部" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="@string/member_detail_location"
+                android:textColor="@color/dusty_gray"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_jersey_number"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_logo" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_jersey_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/member_detail_jersey_number"
+                android:textColor="@color/dusty_gray"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_height"
+                app:layout_constraintStart_toEndOf="@+id/tv_location"
+                app:layout_constraintTop_toTopOf="@+id/tv_location" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/member_detail_height"
+                android:textColor="@color/dusty_gray"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toStartOf="@+id/tv_weight"
+                app:layout_constraintStart_toEndOf="@+id/tv_jersey_number"
+                app:layout_constraintTop_toTopOf="@+id/tv_jersey_number" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tv_weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/member_detail_weight"
+                android:textColor="@color/dusty_gray"
+                android:textSize="11sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/tv_height"
+                app:layout_constraintTop_toTopOf="@+id/tv_height" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/tv_location_value"
+                android:textColor="@color/mine_shaft"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_location"
+                app:layout_constraintStart_toStartOf="@+id/tv_location"
+                app:layout_constraintTop_toBottomOf="@+id/tv_location"
+                tools:text="中锋" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/tv_jersey_number_value"
+                android:textColor="@color/mine_shaft"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_jersey_number"
+                app:layout_constraintStart_toStartOf="@+id/tv_jersey_number"
+                app:layout_constraintTop_toBottomOf="@+id/tv_jersey_number"
+                tools:text="7号" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/tv_height_value"
+                android:textColor="@color/mine_shaft"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_height"
+                app:layout_constraintStart_toStartOf="@+id/tv_height"
+                app:layout_constraintTop_toBottomOf="@+id/tv_height"
+                tools:text="187 CM" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:id="@+id/tv_weight_value"
+                android:textColor="@color/mine_shaft"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/tv_weight"
+                app:layout_constraintStart_toStartOf="@+id/tv_weight"
+                app:layout_constraintTop_toBottomOf="@+id/tv_weight"
+                tools:text="80 KG" />
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_call_phone"
+                android:background="@drawable/shape_call_phone_bg"
+                android:drawableStart="@drawable/icon_phone"
+                android:drawablePadding="12dp"
+                android:paddingStart="32dp"
+                android:paddingTop="4dp"
+                android:paddingEnd="32dp"
+                android:paddingBottom="4dp"
+                android:textColor="@color/mine_shaft"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv_member_detail"
+                tools:text="110****0000" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

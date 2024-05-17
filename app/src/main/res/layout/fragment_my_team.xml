@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".mine.myTeam.MyTeamFragment">
+
+    <com.jtsportech.visport.android.components.AppBarView
+        android:id="@+id/ap_my_team"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:bar_left_icon="@drawable/icon_backarrow_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/mine_my_team" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_team"
+        android:layout_width="0dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/shape_team_bg"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_my_team" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_team_logo"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_team"
+        app:layout_constraintStart_toStartOf="@+id/iv_team"
+        app:layout_constraintTop_toTopOf="@+id/iv_team" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/saddle_brown"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_team_logo"
+        app:layout_constraintTop_toTopOf="@+id/iv_team_logo"
+        tools:text="皇家马德里" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_underling_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:textColor="@color/saddle_brown"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_team_name"
+        app:layout_constraintTop_toBottomOf="@+id/tv_team_name"
+        tools:text="—— 青训队" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_toggle_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/shape_alert_sure_bg"
+        android:drawableStart="@drawable/icon_toggleteam"
+        android:drawablePadding="2dp"
+        android:paddingStart="12dp"
+        android:paddingTop="8dp"
+        android:paddingEnd="12dp"
+        android:paddingBottom="8dp"
+        android:text="@string/my_team_switch_teams"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_team"
+        app:layout_constraintEnd_toEndOf="@+id/iv_team"
+        app:layout_constraintTop_toTopOf="@+id/iv_team" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_member"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_team"
+        tools:listitem="@layout/item_team_menber" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_no_team"
+        android:visibility="gone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="@string/my_team_there_are_no_teams_to_join"
+        android:textColor="@color/mine_shaft"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_my_team" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_team"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="iv_team,iv_team_logo,tv_team_name,tv_team_underling_name,tv_toggle_team,rv_member" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

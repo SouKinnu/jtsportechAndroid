@@ -1,0 +1,171 @@
+[versions]
+# 基本配置
+namespace = "com.example.versioncontrolsample"
+compileSdk = "34"
+applicationId = "com.example.versioncontrolsample"
+minSdk = "23"
+targetSdk = "34"
+versionCode = "1"
+versionName = "0.0.1"
+# AndroidLibs
+agp = "8.2.0"
+ksp = "1.9.10-1.0.13" #需要跟你的 kotlin 版本保持一致
+kotlin = "1.9.10"
+core-ktx = "1.12.0"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+appcompat = "1.6.1"
+material = "1.11.0"
+constraintlayout = "2.1.4"
+# Navigation
+jetpackNavigation = "2.7.6"
+jetpackNavigationUi = "2.5.3"
+# Lifecycle
+jetpackLifecycle = "2.6.2"
+# Room
+room = "2.6.1"
+# Concurrency
+coroutines = "1.7.3"
+# Utility
+utilCodeX = "1.31.1"
+glide = "4.11.0"
+timber = "5.0.1"
+mmkv = "1.2.14"
+startup = "1.1.0"
+xCrash = "3.0.0"
+permissionX = "1.7.1"
+livedatabus = "1.8.14"
+activityResultLauncher = "1.1.2"
+bugly = "latest.release"
+umsdkCommon = "+"
+umsdkAsms = "+"
+umsdkApm = "1.7.0"
+umsdkUverify = "2.6.1"
+umsdkUverifyMain = "2.2.3"
+umsdkUverifyLogger = "2.2.2"
+easyFloat = "2.0.4"
+gifDrawable = "1.2.24"
+fancyShowCaseView = "1.3.9"
+mpAndroidChart = "v3.1.0"
+weChat = "+"
+facebook = "16.0.1"
+jpush = "5.0.3"
+banner = "2.2.2"
+zxing = "3.4.1"
+shadowlayout = "3.4.0"
+gsyVideoPlayer = "v8.6.0-release-jitpack"
+# Firebase
+firebaseBom = "32.7.0"
+firebaseAnalytics = "firebase-analytics-ktx"
+firebaseCrashlytics = "firebase-crashlytics-ktx"
+firebaseNdkCrashlytics = "firebase-crashlytics-ndk"
+firebasePerf = "firebase-perf-ktx"
+firebaseMessaging = "firebase-messaging-ktx"
+firebaseAuth = "firebase-auth-ktx"
+playServicesAuth = "20.7.0"
+# Networking
+okhttp = "4.10.0"
+retrofit = "2.9.0"
+gson = "2.10"
+gsonConverter = "2.9.0"
+legacy-support-v4 = "1.0.0"
+# CameraX
+camerax = "1.3.1"
+# ML Kit
+barcode-scanning = "17.2.0"
+#Edit Image
+editImage = "1.1.0"
+activity = "1.8.0"
+
+
+[libraries]
+# AndroidLibs
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+constraintlayout = { group = "androidx.constraintlayout", name = "constraintlayout", version.ref = "constraintlayout" }
+# Navigation
+jetpackNavigation = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "jetpackNavigation" }
+jetpackNavigationUi = { group = "androidx.navigation", name = "navigation-ui-ktx", version.ref = "jetpackNavigation" }
+jetpackNavigationSafeArgsGradlePlugin = { group = "androidx.navigation", name = "navigation-safe-args-gradle-plugin", version.ref = "jetpackNavigation" }
+# Lifecycle
+jetpackLivedata = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "jetpackLifecycle" }
+jetpackViewModel = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "jetpackLifecycle" }
+jetpackLifecycleCompile = { group = "androidx.lifecycle", name = "ifecycle-compiler", version.ref = "jetpackLifecycle" }
+# Room
+roomRuntime = { group = "androidx.room", name = "room-runtime", version.ref = "room" }
+roomCompiler = { group = "androidx.room", name = "room-compiler", version.ref = "room" }
+roomKtx = { group = "androidx.room", name = ":room-ktx", version.ref = "room" }
+# Concurrency
+coroutines = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-core", version.ref = "coroutines" }
+coroutinesAndroid = { group = "org.jetbrains.kotlinx", name = "kotlinx-coroutines-android", version.ref = "coroutines" }
+# Utility
+utilCodeX = { group = "com.blankj", name = "utilcodex", version.ref = "utilCodeX" }
+glide = { group = "com.github.bumptech.glide", name = "glide", version.ref = "glide" }
+glideCompiler = { group = "com.github.bumptech.glide", name = "compiler", version.ref = "glide" }
+glideksp = { group = "com.github.bumptech.glide", name = "ksp", version.ref = "glide" }
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+mmkv = { group = "com.tencent", name = "mmkv", version.ref = "mmkv" }
+startup = { group = "io.github.idisfkj", name = "android-startup", version.ref = "startup" }
+xCrash = { group = "com.iqiyi.xcrash", name = "xcrash-android-lib", version.ref = "xCrash" }
+permissionX = { group = "com.guolindev.permissionx", name = "permissionx", version.ref = "permissionX" }
+livedatabus = { group = "com.github.michaellee123", name = "LiveEventBus", version.ref = "livedatabus" }
+activityResultLauncher = { group = "com.github.DylanCaiCoding", name = "ActivityResultLauncher", version.ref = "activityResultLauncher" }
+buglyCrashreport = { group = "com.tencent.bugly", name = "crashreport", version.ref = "bugly" }
+umsdkCommon = { group = "com.umeng.umsdk", name = "common", version.ref = "umsdkCommon" }
+umsdkAsms = { group = "com.umeng.umsdk", name = "asms", version.ref = "umsdkAsms" }
+umsdkApm = { group = "com.umeng.umsdk", name = "apm", version.ref = "umsdkApm" }
+umsdkUverify = { group = "com.umeng.umsdk", name = "uverify", version.ref = "umsdkUverify" }
+umsdkUverifyMain = { group = "com.umeng.umsdk", name = "uverify-main", version.ref = "umsdkUverifyMain" }
+umsdkUverifyLogger = { group = "com.umeng.umsdk", name = "uverify-logger", version.ref = "umsdkUverifyLogger" }
+easyFloat = { group = "com.github.princekin-f", name = "EasyFloat", version.ref = "easyFloat" }
+gifDrawable = { group = "pl.droidsonroids.gif", name = "android-gif-drawable", version.ref = "gifDrawable" }
+fancyShowCaseView = { group = "com.github.faruktoptas", name = "FancyShowCaseView", version.ref = "fancyShowCaseView" }
+mpAndroidChart = { group = "com.github.PhilJay", name = "MPAndroidChart", version.ref = "mpAndroidChart" }
+weChat = { group = "com.tencent.mm.opensdk", name = "wechat-sdk-android", version.ref = "weChat" }
+facebook = { group = "com.facebook.android", name = "facebook-android-sdk", version.ref = "facebook" }
+jpush = { group = "cn.jiguang.sdk", name = "jpush", version.ref = "jpush" }
+banner = { group = "io.github.youth5201314", name = "banner", version.ref = "banner" }
+zxing = { group = "com.google.zxing", name = "core", version.ref = "zxing" }
+shadowlayout = { group = "com.github.lihangleo2", name = "ShadowLayout", version.ref = "shadowlayout" }
+gsyVideoPlayer = { group = "com.github.CarGuo.GSYVideoPlayer", name = "GSYVideoPlayer", version.ref = "gsyVideoPlayer" }
+# Firebase
+firebaseBom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebaseBom" }
+firebaseAnalytics = { group = "com.google.firebase", name = "firebase-analytics-ktx" }
+firebaseCrashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ktx" }
+firebaseNdkCrashlytics = { group = "com.google.firebase", name = "firebase-crashlytics-ndk" }
+firebasePerf = { group = "com.google.firebase", name = "firebase-perf-ktx" }
+firebaseMessaging = { group = "com.google.firebase", name = "firebase-messaging-ktx" }
+firebaseAuth = { group = "com.google.firebase", name = "firebase-auth-ktx" }
+playServicesAuth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "playServicesAuth" }
+# Networking
+okhttpBom = { group = "com.squareup.okhttp3", name = "okhttp-bom", version.ref = "okhttp" }
+okhttp = { group = "com.squareup.okhttp3", name = "okhttp" }
+okhttpLoggingInterceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor" }
+retrofit = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+gsonConverter = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "gsonConverter" }
+legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support-v4", version.ref = "legacy-support-v4" }
+# CameraX
+camera-core = { group = "androidx.camera", name = "camera-core", version.ref = "camerax" }
+camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "camerax" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "camerax" }
+camera-view = { group = "androidx.camera", name = "camera-view", version.ref = "camerax" }
+# ML Kit
+barcode-scanning = { group = "com.google.mlkit", name = "barcode-scanning", version.ref = "barcode-scanning" }
+#Edit Image
+editImage = { group = "com.github.OneZeroYang", name = "EditImage", version.ref = "editImage" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activity" }
+
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+androidLibrary = { id = "com.android.library", version.ref = "agp" }
+kspApplication = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+kaptApplication = { id = "kotlin-kapt", version.ref = "kotlin" }
+kspLibrary = { id = "com.google.devtools.ksp" }
+#safeargsKotlin = { id = "androidx.navigation.safeargs.kotlin", version.ref = "" }
+

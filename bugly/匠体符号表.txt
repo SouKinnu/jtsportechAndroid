@@ -1,0 +1,1 @@
+java -jar buglyqq-upload-symbol.jar -appid e65e107514 -appkey e8541a8f-49bf-4b0f-af22-9a25d75aeeb4 -bundleid com.jtsportech.visport.android -version 0.0.12 -platform Android -inputMapping F:\AndoridProject\CompanyProjects\jtsportechAndroid\app\build\outputs\mapping\release\mapping.txt

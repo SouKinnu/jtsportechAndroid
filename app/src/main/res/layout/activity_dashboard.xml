@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".dashboard.DashboardActivity">
+    <!--  tools:openDrawer="start"  -->
+
+    <!-- 主布局   -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/fl_main"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/nb_dashboard"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <com.jtsportech.visport.android.components.NavigationBarView
+            android:id="@+id/nb_dashboard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/layerlist_nav_bg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:selectedTextColor="@color/international_orange"
+            app:unSelectedTextColor="@color/dove_gray" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 侧边栏   -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:clickable="true"
+        android:background="@color/porcelain">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_side_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_side_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_greeting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/mine_shaft"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guide_side_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/dashboard_good_afternoon" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_scan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/icon_scan"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_greeting"
+            app:layout_constraintEnd_toEndOf="@id/guide_side_end"
+            app:layout_constraintTop_toTopOf="@+id/tv_greeting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_recently"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="33dp"
+            android:text="@string/dashboard_recently"
+            android:textColor="@color/mine_shaft"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guide_side_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_greeting" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_recently_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableEnd="@drawable/icon_center_arrow_gray"
+            android:drawablePadding="6dp"
+            android:text="@string/dashboard_all"
+            android:textColor="@color/dusty_gray"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_recently"
+            app:layout_constraintEnd_toEndOf="@+id/guide_side_end"
+            app:layout_constraintTop_toTopOf="@+id/tv_recently" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_recently"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/guide_side_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_side_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recently">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.jtsportech.visport.android.components.SubmenuButton
+                    android:id="@+id/sb_competition"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:isShowMore="false"
+                    app:title="@string/dashboard_race"
+                    app:titleColor="@color/mine_shaft"
+                    app:titleIcon="@drawable/icon_side_competition"
+                    app:titleSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="42dp"
+                    android:background="@color/concrete" />
+
+                <com.jtsportech.visport.android.components.SubmenuButton
+                    android:id="@+id/sb_training"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:isShowMore="false"
+                    app:title="@string/dashboard_training"
+                    app:titleColor="@color/mine_shaft"
+                    app:titleIcon="@drawable/icon_side_train"
+                    app:titleSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="42dp"
+                    android:background="@color/concrete" />
+
+                <com.jtsportech.visport.android.components.SubmenuButton
+                    android:id="@+id/sb_video"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:isShowMore="false"
+                    app:title="@string/dashboard_events"
+                    app:titleColor="@color/mine_shaft"
+                    app:titleIcon="@drawable/icon_side_video"
+                    app:titleSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/dashboard_contingent"
+            android:textColor="@color/mine_shaft"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/guide_side_start"
+            app:layout_constraintTop_toBottomOf="@+id/mc_recently" />
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/mc_team"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:cardCornerRadius="6dp"
+            app:cardElevation="2dp"
+            app:layout_constraintEnd_toEndOf="@+id/guide_side_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_side_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_team">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <com.jtsportech.visport.android.components.SubmenuButton
+                    android:id="@+id/sb_switch_teams"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:isShowMore="false"
+                    app:title="@string/dashboard_switch_teams"
+                    app:titleColor="@color/mine_shaft"
+                    app:titleIcon="@drawable/icon_side_toggle"
+                    app:titleSize="14sp" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginStart="42dp"
+                    android:background="@color/concrete" />
+
+                <com.jtsportech.visport.android.components.SubmenuButton
+                    android:id="@+id/sb_team_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="46dp"
+                    app:isShowMore="false"
+                    app:title="@string/dashboard_team_info"
+                    app:titleColor="@color/mine_shaft"
+                    app:titleIcon="@drawable/icon_side_info"
+                    app:titleSize="14sp" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/mb_sign_out"
+            style="@style/SignOutButton"
+            android:layout_width="0dp"
+            android:layout_height="72dp"
+            android:text="@string/dashboard_sign_out"
+            app:icon="@drawable/icon_quit"
+            app:iconGravity="textStart"
+            app:iconTint="@color/dusty_gray_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

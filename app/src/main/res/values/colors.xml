@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="mine_shaft">#333333</color>
+    <color name="white_alpha_10">#1AFFFFFF</color>
+    <color name="alto">#DDDDDD</color>
+    <color name="dusty_gray">#999999</color>
+    <color name="texas_rose">#FFB45B</color>
+    <color name="ecstasy">#F7621B</color>
+    <color name="mercury">#E6E6E6</color>
+    <color name="alto_2">#DCDCDC</color>
+    <color name="dusty_gray_2">#979797</color>
+    <color name="gray">#888888</color>
+    <color name="gray_2">#667F7F7F</color>
+    <color name="porcelain">#F1F2F3</color>
+    <color name="athens_gray">#E9ECEF</color>
+    <color name="dove_gray">#666666</color>
+    <color name="concrete">#F2F2F2</color>
+    <color name="black_transparent_15">#263232</color>
+    <color name="international_orange">#FF5200</color>
+    <color name="alto_3">#DFDFDF</color>
+    <color name="alto_3_alpha_50">#80DFDFDF</color>
+    <color name="tundora">#494949</color>
+    <color name="blue_zodiac">#103152</color>
+    <color name="silver_chalice">#AAAAAA</color>
+    <color name="red_orange">#FF3421</color>
+    <color name="supernova">#FFCA00</color>
+    <color name="east_bay">#445D8A</color>
+    <color name="cerulean">#0094DB</color>
+    <color name="japonica">#DC7C68</color>
+    <color name="kenyan_copper">#711E03</color>
+    <color name="mercury_2">#E4E4E4</color>
+    <color name="mercury_3">#DDDDDD</color>
+    <color name="grandis">#FED485</color>
+    <color name="saddle_brown">#4C3200</color>
+    <color name="solitude">#E2F0FF</color>
+    <color name="pippin">#FFE9E0</color>
+    <color name="blue">#418BF7</color>
+    <color name="progress_gray">#EEEEEE</color>
+    <color name="chart_blue">#3BB2EA</color>
+    <color name="chart_purple">#A682FF</color>
+    <color name="chart_green">#4CB9CB</color>
+    <color name="chart_pink">#EBB5E4</color>
+    <color name="chart_orange">#FF8E52</color>
+    <color name="green">#51D546</color>
+    <color name="bg_player">#F1F2F3</color>
+    <color name="bg_radio">#FFF0E9</color>
+    <color name="pop_black">#46474A</color>
+    <color name="message_gray">#D1D1D1</color>
+    <color name="black_alpha_38">#61000000</color>
+    <color name="black_alpha_10">#1a000000</color>
+    <color name="orange">#FF8C00</color>
+    <color name="voice_gray">#9B9B9B</color>
+    <color name="golden_yellow">#FFAD48</color>
+    <color name="black_a60">#99000000</color>
+    <color name="gallery">#ECECEC</color>
+    <color name="wild_sand">#F6F6F6</color>
+    <color name="purple_bar">#6E33FF</color>
+    <color name="dark_green">#375860</color>
+    <color name="yellow_text">#FFB000</color>
+
+
+    <color name="pie_1">#4CB9CB</color>
+    <color name="pie_2">#FF8E52</color>
+    <color name="pie_3">#EBB5E4</color>
+    <color name="pie_4">#3BB2EA</color>
+    <color name="pie_5">#A682FF</color>
+    <color name="pie_6">#FBD438</color>
+
+
+    <color name="bottom_line">#4C4B4B</color>
+</resources>

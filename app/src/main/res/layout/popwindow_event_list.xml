@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lihang.ShadowLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:hl_cornerRadius="6dp"
+    app:hl_shadowColor="@color/message_gray"
+    app:hl_shadowLimit="5dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_event_pop"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/item_pop_event">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+</com.lihang.ShadowLayout>

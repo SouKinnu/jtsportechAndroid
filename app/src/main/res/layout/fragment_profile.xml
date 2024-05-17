@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".mine.profile.ProfileFragment">
+
+    <com.jtsportech.visport.android.components.AppBarView
+        android:id="@+id/ap_profile"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:bar_left_icon="@drawable/icon_backarrow_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/mine_personal_center" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_avatar"
+        android:layout_width="68dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_profile" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_edit_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/icon_edit_photo"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_avatar"
+        app:layout_constraintEnd_toEndOf="@+id/iv_avatar" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_avatar">
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:isShowMore="false"
+            app:isShowUnderscore="true"
+            app:title="@string/profile_user_name"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_user_role"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:isShowMore="false"
+            app:isShowUnderscore="true"
+            app:title="@string/profile_user_role"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:isShowUnderscore="true"
+            app:title="@string/profile_phone_number"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_current_subject"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:isShowMore="false"
+            app:title="@string/profile_current_subject"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_sign_out"
+        style="@style/SignOutButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/dashboard_sign_out"
+        app:backgroundTint="@color/porcelain"
+        app:iconGravity="textStart"
+        app:iconTint="@color/dusty_gray_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_mine"
+    app:startDestination="@id/profileFragment">
+
+    <action
+        android:id="@+id/action_global_recentlyWatchedFragment"
+        app:destination="@id/recentlyWatchedFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_myFavoritesFragment"
+        app:destination="@id/myFavoritesFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_myTeamFragment"
+        app:destination="@id/myTeamFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_privacyAndSecurityFragment"
+        app:destination="@id/privacyAndSecurityFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_setupFragment"
+        app:destination="@id/setupFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_aboutFragment"
+        app:destination="@id/aboutFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_inviteFriendsFragment"
+        app:destination="@id/inviteFriendsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_switchTeamsFragment"
+        app:destination="@id/switchTeamsFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/profileFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.jtsportech.visport.android.mine.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_changePhoneNumberFragment"
+            app:destination="@id/changePhoneNumberFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/recentlyWatchedFragment"
+        android:name="com.jtsportech.visport.android.mine.recentlyWatched.RecentlyWatchedFragment"
+        android:label="fragment_recently_watched"
+        tools:layout="@layout/fragment_recently_watched">
+
+        <argument
+            android:name="index"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/myFavoritesFragment"
+        android:name="com.jtsportech.visport.android.mine.myFavorites.MyFavoritesFragment"
+        android:label="fragment_my_favorites"
+        tools:layout="@layout/fragment_my_favorites" />
+    <fragment
+        android:id="@+id/myTeamFragment"
+        android:name="com.jtsportech.visport.android.mine.myTeam.MyTeamFragment"
+        android:label="fragment_my_team"
+        tools:layout="@layout/fragment_my_team">
+        <action
+            android:id="@+id/action_myTeamFragment_to_switchTeamsFragment"
+            app:destination="@id/switchTeamsFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_myTeamFragment_to_memberDetailFragment"
+            app:destination="@id/memberDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/privacyAndSecurityFragment"
+        android:name="com.jtsportech.visport.android.mine.privacyAndSecurity.PrivacyAndSecurityFragment"
+        android:label="fragment_privacy_and_security"
+        tools:layout="@layout/fragment_privacy_and_security">
+        <action
+            android:id="@+id/action_privacyAndSecurityFragment_to_webActivity2"
+            app:destination="@id/webActivity2"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_privacyAndSecurityFragment_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_privacyAndSecurityFragment_to_cancelAccountFragment"
+            app:destination="@id/cancelAccountFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/setupFragment"
+        android:name="com.jtsportech.visport.android.mine.setup.SetupFragment"
+        android:label="fragment_setup"
+        tools:layout="@layout/fragment_setup">
+        <action
+            android:id="@+id/action_setupFragment_to_languageFragment"
+            app:destination="@id/languageFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.jtsportech.visport.android.mine.about.AboutFragment"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/inviteFriendsFragment"
+        android:name="com.jtsportech.visport.android.mine.inviteFriends.InviteFriendsFragment"
+        android:label="fragment_invite_friends"
+        tools:layout="@layout/fragment_invite_friends" />
+    <fragment
+        android:id="@+id/languageFragment"
+        android:name="com.jtsportech.visport.android.mine.language.LanguageFragment"
+        android:label="fragment_language"
+        tools:layout="@layout/fragment_language" />
+    <activity
+        android:id="@+id/webActivity2"
+        android:name="com.jtsportech.visport.android.webview.WebActivity"
+        android:label="activity_web"
+        tools:layout="@layout/activity_web">
+
+        <argument
+            android:name="type"
+            app:argType="com.jtsportech.visport.android.dataSource.webview.WebViewType" />
+
+    </activity>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.jtsportech.visport.android.mine.changePassword.ChangePasswordFragment"
+        android:label="fragment_change_password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/cancelAccountFragment"
+        android:name="com.jtsportech.visport.android.mine.cancelAccount.CancelAccountFragment"
+        android:label="fragment_cancel_account"
+        tools:layout="@layout/fragment_cancel_account" />
+    <fragment
+        android:id="@+id/changePhoneNumberFragment"
+        android:name="com.jtsportech.visport.android.mine.changePhoneNumber.ChangePhoneNumberFragment"
+        android:label="fragment_change_phone_number"
+        tools:layout="@layout/fragment_change_phone_number" />
+    <fragment
+        android:id="@+id/switchTeamsFragment"
+        android:name="com.jtsportech.visport.android.mine.switchTeams.SwitchTeamsFragment"
+        android:label="fragment_switch_teams"
+        tools:layout="@layout/fragment_switch_teams" />
+    <fragment
+        android:id="@+id/memberDetailFragment"
+        android:name="com.jtsportech.visport.android.mine.memberDetail.MemberDetailFragment"
+        android:label="fragment_member_detail"
+        tools:layout="@layout/fragment_member_detail">
+
+        <argument
+            android:name="member"
+            app:argType="com.cloudhearing.android.lib_common.network.dataSource.mine.TeamMembers" />
+
+    </fragment>
+</navigation>

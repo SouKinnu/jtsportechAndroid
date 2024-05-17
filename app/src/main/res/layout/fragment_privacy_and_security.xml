@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".mine.privacyAndSecurity.PrivacyAndSecurityFragment">
+
+    <com.jtsportech.visport.android.components.AppBarView
+        android:id="@+id/ap_privacy_and_security"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:bar_left_icon="@drawable/icon_backarrow_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/mine_privacy_and_security" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ap_privacy_and_security">
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_user_privacy_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:isShowUnderscore="true"
+            app:title="@string/privacy_and_security_user_privacy_agreement"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_user_use_agreement"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:isShowUnderscore="true"
+            app:title="@string/privacy_and_security_user_use_agreement"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_change_your_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:title="@string/privacy_and_security_change_your_password"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/privacy_and_security_link_your_account"
+            android:textColor="@color/dusty_gray_2"
+            android:textSize="12sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_wechat_account"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            app:title="@string/privacy_and_security_wechat_account"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+        <com.jtsportech.visport.android.components.SubmenuButton
+            android:id="@+id/sb_qq_account"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            app:title="@string/privacy_and_security_qq_account"
+            app:titleColor="@color/mine_shaft"
+            app:titleSize="14sp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/mb_delete_account"
+        style="@style/SignOutButton"
+        android:layout_width="0dp"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/privacy_and_security_cancel_account"
+        app:backgroundTint="@color/porcelain"
+        app:iconGravity="textStart"
+        app:iconTint="@color/dusty_gray_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

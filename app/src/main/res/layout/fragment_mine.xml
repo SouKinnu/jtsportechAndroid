@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".dashboard.mine.MineFragment">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_mine_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guide_mine_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_head_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/img_center_bg"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="@string/dashboard_mine"
+            android:textColor="@color/mine_shaft"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_usercenter_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-60dp"
+            android:background="@drawable/bg_usercenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_head_bg" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_avatar"
+            android:layout_width="68dp"
+            android:layout_height="68dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv_usercenter_bg" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:textColor="@color/tundora"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_avatar"
+            tools:text="张三李四" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_center_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_center_left"
+            app:layout_constraintStart_toStartOf="@+id/guide_mine_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_nickname" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_center_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="-20dp"
+            android:adjustViewBounds="true"
+            android:src="@drawable/img_center_right"
+            app:layout_constraintEnd_toEndOf="@+id/guide_mine_end"
+            app:layout_constraintStart_toEndOf="@+id/iv_center_left"
+            app:layout_constraintTop_toTopOf="@+id/iv_center_left" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_team_logo"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-10dp"
+            app:layout_constraintStart_toStartOf="@+id/iv_center_left"
+            app:layout_constraintTop_toTopOf="@+id/iv_center_left"
+            tools:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_team_name"
+            android:layout_width="@dimen/dp_70"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:ellipsize="end"
+            android:textColor="@color/blue_zodiac"
+            android:textSize="14sp"
+            android:singleLine="true"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_center_left"
+            app:layout_constraintStart_toEndOf="@+id/iv_team_logo"
+            app:layout_constraintTop_toTopOf="@+id/iv_center_left"
+            tools:text="拜仁慕尼黑" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_instructor_logo"
+            android:layout_width="42dp"
+            android:layout_height="42dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_center_right"
+            app:layout_constraintTop_toTopOf="@+id/iv_center_left"
+            tools:src="@mipmap/ic_launcher" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_instructor_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:textColor="@color/blue_zodiac"
+            android:textSize="14sp"
+            app:layout_constraintBottom_toBottomOf="@+id/iv_center_right"
+            app:layout_constraintEnd_toStartOf="@+id/iv_instructor_logo"
+            app:layout_constraintTop_toTopOf="@+id/iv_center_right"
+            tools:text="主教练" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_recently_watched"
+            android:layout_width="106dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/img_myvideo"
+            android:gravity="center"
+            android:text="@string/mine_recently_watched"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_my_favorites"
+            app:layout_constraintStart_toStartOf="@+id/guide_mine_start"
+            app:layout_constraintTop_toBottomOf="@+id/iv_usercenter_bg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_my_favorites"
+            android:layout_width="106dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/img_collect"
+            android:gravity="center"
+            android:text="@string/mine_my_favorites"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_my_team"
+            app:layout_constraintStart_toEndOf="@+id/tv_recently_watched"
+            app:layout_constraintTop_toBottomOf="@+id/iv_usercenter_bg" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tv_my_team"
+            android:layout_width="106dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="24dp"
+            android:background="@drawable/img_myteam"
+            android:gravity="center"
+            android:text="@string/mine_my_team"
+            android:textColor="@color/mine_shaft"
+            android:textSize="14sp"
+            app:layout_constraintEnd_toEndOf="@+id/guide_mine_end"
+            app:layout_constraintStart_toEndOf="@+id/tv_my_favorites"
+            app:layout_constraintTop_toBottomOf="@+id/iv_usercenter_bg" />
+
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="@+id/guide_mine_end"
+            app:layout_constraintStart_toStartOf="@+id/guide_mine_start"
+            app:layout_constraintTop_toBottomOf="@+id/tv_recently_watched">
+
+            <com.jtsportech.visport.android.components.SubmenuButton
+                android:id="@+id/sb_personal_center"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:title="@string/mine_personal_center"
+                app:titleColor="@color/mine_shaft"
+                app:titleIcon="@drawable/icon_center_userinfo"
+                app:titleSize="14sp" />
+
+            <com.jtsportech.visport.android.components.SubmenuButton
+                android:id="@+id/sb_privacy_and_security"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:title="@string/mine_privacy_and_security"
+                app:titleColor="@color/mine_shaft"
+                app:titleIcon="@drawable/icon_center_safe"
+                app:titleSize="14sp" />
+
+            <com.jtsportech.visport.android.components.SubmenuButton
+                android:id="@+id/sb_set_up"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:title="@string/mine_set_up"
+                app:titleColor="@color/mine_shaft"
+                app:titleIcon="@drawable/icon_center_set"
+                app:titleSize="14sp" />
+
+            <com.jtsportech.visport.android.components.SubmenuButton
+                android:id="@+id/sb_about_us"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:title="@string/mine_about_us"
+                app:titleColor="@color/mine_shaft"
+                app:titleIcon="@drawable/icon_center_about"
+                app:titleSize="14sp" />
+
+            <com.jtsportech.visport.android.components.SubmenuButton
+                android:id="@+id/sb_invite_friends"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                app:title="@string/mine_invite_friends"
+                app:titleColor="@color/mine_shaft"
+                app:titleIcon="@drawable/icon_center_nvite"
+                app:titleSize="14sp" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/group_team_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:constraint_referenced_ids="iv_center_left,iv_team_logo,tv_team_name,iv_center_right,tv_instructor_name,iv_instructor_logo" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

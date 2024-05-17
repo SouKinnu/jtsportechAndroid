@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/cl_root"
+    android:background="@color/white"
+    android:layout_height="match_parent"
+    tools:context=".webview.WebActivity">
+
+    <com.jtsportech.visport.android.components.AppBarView
+        android:id="@+id/ap_webview"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        app:bar_left_icon="@drawable/icon_backarrow_black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <com.jtsportech.visport.android.components.CtaButton
+        android:id="@+id/bt_sure"
+        style="@style/ButtonDisabled"
+        android:layout_width="0dp"
+        android:visibility="gone"
+        android:layout_height="44dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="40dp"
+        android:text="@string/agreement_button_not_activated"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

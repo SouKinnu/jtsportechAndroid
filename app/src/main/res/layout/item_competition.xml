@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_97"
+    android:background="@drawable/homg_list_bg">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_edit"
+        android:layout_width="@dimen/dp_21"
+        android:layout_height="@dimen/dp_18"
+        android:adjustViewBounds="true"
+        android:src="@drawable/selector_favorites_edit"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_compilation"
+        android:layout_width="@dimen/dp_29"
+        android:layout_height="@dimen/dp_29"
+        android:adjustViewBounds="true"
+        android:src="@drawable/tag_collect_album"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_compilation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginEnd="2dp"
+        android:rotation="45"
+        android:text="@string/my_favorites_compilation"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_8"
+        app:layout_constraintEnd_toEndOf="@+id/iv_compilation"
+        app:layout_constraintTop_toTopOf="@+id/iv_compilation" />
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/group_compilation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:constraint_referenced_ids="iv_compilation,tv_compilation"
+        tools:visibility="visible" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_percent_33"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guide_percent_66"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_stadium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_4"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_12"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="伯纳乌球场" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_competition_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_6"
+        android:textColor="@color/dove_gray"
+        android:textSize="@dimen/sp_11"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="2023-01-01/小组赛第一轮" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_team_logo1"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="@+id/guide_percent_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_name1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:maxWidth="@dimen/dp_70"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="@+id/guide_percent_33"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/iv_team_logo1" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_team_logo2"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_40"
+        android:layout_marginTop="@dimen/dp_10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide_percent_66"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_name2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:maxWidth="@dimen/dp_70"
+        android:textColor="@color/mine_shaft"
+        android:textSize="@dimen/sp_14"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guide_percent_66"
+        app:layout_constraintTop_toBottomOf="@+id/iv_team_logo2" />
+
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_score"
+        android:layout_width="@dimen/dp_58"
+        android:layout_height="@dimen/dp_18"
+        android:src="@drawable/icon_score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_score1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_score"
+        app:layout_constraintEnd_toStartOf="@+id/tv_team_score2"
+        app:layout_constraintStart_toStartOf="@+id/iv_score"
+        app:layout_constraintTop_toTopOf="@+id/iv_score"
+        tools:text="10" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_team_score2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="@dimen/sp_13"
+        app:layout_constraintBottom_toBottomOf="@+id/iv_score"
+        app:layout_constraintEnd_toEndOf="@+id/iv_score"
+        app:layout_constraintStart_toEndOf="@+id/tv_team_score1"
+        app:layout_constraintTop_toTopOf="@+id/iv_score"
+        tools:text="10" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

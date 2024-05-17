@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppTheme" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <!--    <style name="SplashTheme" parent="AppTheme">-->
+    <!--        <item name="android:windowNoTitle">true</item>-->
+    <!--        <item name="android:windowFullscreen">true</item>-->
+    <!--        <item name="android:windowAnimationStyle">@null</item>-->
+    <!--        // 解决部分机型,会闪烁问题-->
+    <!--        <item name="android:windowBackground">@drawable/ic_splash</item>-->
+    <!--    </style>-->
+
+    <style name="Button" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
+        <item name="android:lineSpacingMultiplier">2.86</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:elevation">2dp</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Button</item>
+        <item name="cornerRadius">6dp</item>
+    </style>
+
+    <style name="ButtonDisabled" parent="Button">
+        <item name="textAllCaps">false</item>
+        <item name="android:enabled">false</item>
+        <item name="android:elevation">@dimen/button_elevation_disabled</item>
+        <item name="backgroundTint">@color/mercury</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="SignOutButton" parent="Button">
+        <item name="backgroundTint">@color/athens_gray</item>
+        <item name="textAllCaps">false</item>
+        <item name="cornerRadius">0dp</item>
+        <item name="android:textColor">@color/dove_gray</item>
+    </style>
+
+    <style name="InvitationCodeEditText">
+        <item name="android:textCursorDrawable">@drawable/shape_edit_cursor</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">44dp</item>
+        <!--        <item name="android:background">@drawable/shape_login_input_bg</item>-->
+        <item name="android:paddingStart">24dp</item>
+        <item name="android:paddingEnd">24dp</item>
+        <item name="hintTextColor">@color/dusty_gray</item>
+        <item name="android:textColor">@color/mine_shaft</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="colorControlNormal">@color/alto_2</item>
+        <item name="colorControlActivated">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="LoginEditText">
+        <item name="android:textCursorDrawable">@drawable/shape_edit_cursor</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">30dp</item>
+        <item name="android:background">@null</item>
+        <item name="android:paddingStart">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+        <item name="hintTextColor">@color/dusty_gray</item>
+        <item name="android:textColor">@color/mine_shaft</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="colorControlNormal">@color/alto_2</item>
+        <item name="colorControlActivated">@android:color/holo_orange_dark</item>
+    </style>
+
+    <style name="popwindow_anim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/anim_popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/anim_popup_exit</item>
+    </style>
+
+    <style name="TranslucentActivity" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+    </style>
+    <style name="Dialog.NoTitle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/popwindow_anim</item>
+    </style>
+
+    <style name="AppTheme.NoTitle_FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item><!--控制刘海处显示信息-->
+    </style>
+</resources>

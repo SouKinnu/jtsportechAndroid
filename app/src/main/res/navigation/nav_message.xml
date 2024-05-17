@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_message"
+    app:startDestination="@id/matchMessageFragment">
+
+    <action
+        android:id="@+id/action_global_interactiveMessageFragment"
+        app:destination="@id/interactiveMessageFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/matchMessageFragment"
+        app:popUpToInclusive="true" />
+    <action
+        android:id="@+id/action_global_applicationMessageFragment"
+        app:destination="@id/applicationMessageFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/matchMessageFragment"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/action_global_searchMessageFragment"
+        app:destination="@id/searchMessageFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@anim/slide_in_left"
+        app:popExitAnim="@anim/slide_out_right"
+        app:popUpTo="@id/matchMessageFragment"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/matchMessageFragment"
+        android:name="com.jtsportech.visport.android.message.match.MatchMessageFragment"
+        android:label="fragment_match_message"
+        tools:layout="@layout/fragment_match_message" />
+    <fragment
+        android:id="@+id/interactiveMessageFragment"
+        android:name="com.jtsportech.visport.android.message.interactive.InteractiveMessageFragment"
+        android:label="fragment_interactive_message"
+        tools:layout="@layout/fragment_interactive_message" />
+    <fragment
+        android:id="@+id/applicationMessageFragment"
+        android:name="com.jtsportech.visport.android.message.application.ApplicationMessageFragment"
+        android:label="fragment_application_message"
+        tools:layout="@layout/fragment_application_message" />
+    <fragment
+        android:id="@+id/searchMessageFragment"
+        android:name="com.jtsportech.visport.android.message.search.SearchMessageFragment"
+        android:label="fragment_search_message"
+        tools:layout="@layout/fragment_search_message" />
+</navigation>

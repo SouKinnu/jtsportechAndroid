@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_14"
+        app:layout_constraintEnd_toEndOf="@+id/v_tab_indicator"
+        app:layout_constraintStart_toStartOf="@+id/v_tab_indicator"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/home_race" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dp_2"
+        android:src="@drawable/icon_arrow_down"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_tab"
+        app:layout_constraintStart_toEndOf="@+id/tv_tab"
+        app:layout_constraintTop_toTopOf="@+id/tv_tab"
+        tools:visibility="visible" />
+
+    <View
+        android:id="@+id/v_tab_indicator"
+        android:layout_width="@dimen/dp_40"
+        android:layout_height="@dimen/dp_4"
+        android:layout_marginTop="@dimen/dp_1"
+        android:background="@drawable/shape_tab_indicator"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_tab"
+        tools:visibility="visible" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
